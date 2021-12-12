@@ -1,1 +1,1 @@
-i am gay
+random stuff about me
