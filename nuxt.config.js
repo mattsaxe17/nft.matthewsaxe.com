@@ -56,20 +56,26 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
+      options: { customProperties: true },
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: '#EB5E28',
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          secondary: '#ED6D3C',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          background: '#252422'
+          background: '#252422',
+          anchor: '#CCC5B9'
         },
         light: {
-
-        },
+          primary: '#EB5E28',
+          accent: colors.grey.darken4,
+          secondary: '#ED6D3C',
+          background: '#FFFCF2',
+          anchor: '#252422',
+        }
       },
     },
   },

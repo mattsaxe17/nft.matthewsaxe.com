@@ -22,7 +22,7 @@
     gap: .5em;
 
     span {
-      color: $primary-color;
+      color: var(--v-primary-base);
     }
 
     &::after {
@@ -30,7 +30,7 @@
       display: block;
       position: relative;
       height: 1px;
-      background-color: $medium-color;
+      background-color: var(--v-medium-base);
       width: 100%;
     }
   }
