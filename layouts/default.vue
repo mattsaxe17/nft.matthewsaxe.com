@@ -48,7 +48,8 @@ export default Vue.extend({
 
       appBar.style.top = this.scrollPos > currentScrollPos || currentScrollPos < 30 ? '0' : '-100%';
       appBar.style.boxShadow = currentScrollPos < 30 ? 'none' : '0 10px 30px -10px black';
-      appBar.style.paddingTop = currentScrollPos < 30 ? '2em' : '1em';
+      appBar.style.paddingTop = currentScrollPos < 30 ? '2em' : '1.5em';
+      appBar.style.paddingBottom = currentScrollPos < 30 ? '2em' : '1.5em';
       appBar.style.height = currentScrollPos < 30 ? '8em' : '6em';
 
       this.scrollPos = currentScrollPos;
