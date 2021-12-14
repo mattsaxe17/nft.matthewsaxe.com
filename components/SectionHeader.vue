@@ -2,12 +2,28 @@
   <div class="section-header">
     <h2>
       <span class="number">
-        <slot name="number"></slot>.
+        {{ number }}.
       </span>
-      <slot></slot>
+      {{ title }}
     </h2>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    number: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
 .section-header {

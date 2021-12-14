@@ -29,6 +29,8 @@ export default Vue.extend({
 <style lang="scss" scoped>
 #nav-bar {
   height: 50%;
+  display: flex;
+  align-items: center;
 
   #mobile-menu {
     height: 100%;
