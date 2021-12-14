@@ -6,10 +6,26 @@
 
     <section id="about">
       <section-header>
-        <template #number>01</template>
+        <template #number>00</template>
         About me
       </section-header>
       <nuxt-content :document="about" />
+    </section>
+
+    <section id="projects">
+      <section-header>
+        <template #number>01</template>
+        My projects
+      </section-header>
+      <nuxt-content :document="projects" />
+    </section>
+
+    <section id="projects">
+      <section-header>
+        <template #number>02</template>
+        Get in touch
+      </section-header>
+      <nuxt-content :document="contact" />
     </section>
   </div>
 </template>
@@ -19,10 +35,14 @@ export default {
   async asyncData({ $content }) {
     const hero = await $content('hero').fetch();
     const about = await $content('about').fetch();
+    const projects = await $content('projects').fetch();
+    const contact = await $content('contact').fetch();
 
     return {
       hero,
       about,
+      projects,
+      contact
     };
   },
 };

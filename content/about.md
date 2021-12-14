@@ -5,8 +5,9 @@ Nowadays, I work as a programmer and a freelance software engineer where I aim t
 <br />
 
 #### What I've been working with lately:
-- Javascript (ES6)
+- JavaScript (ES6)
 - Vue.js
 - Node.js
 - React
 - Nuxt
+- Sass

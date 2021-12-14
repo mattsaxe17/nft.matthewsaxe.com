@@ -1,7 +1,7 @@
 <template>
   <div class="section-header">
     <h2>
-      <span>
+      <span class="number">
         <slot name="number"></slot>.
       </span>
       <slot></slot>
@@ -13,6 +13,10 @@
 .section-header {
   display: flex;
   padding-bottom: 3em;
+
+  .number {
+    font-size: .8em;
+  }
 
   h2 {
     width: 100%;
@@ -30,7 +34,7 @@
       display: block;
       position: relative;
       height: 1px;
-      background-color: var(--v-medium-base);
+      background-color: var(--v-primary-base);
       width: 100%;
     }
   }
