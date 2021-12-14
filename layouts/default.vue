@@ -80,7 +80,7 @@ export default Vue.extend({
   }
 
   #mobile-menu-drawer-content {
-    padding: 1em;
+    padding: 2em;
     z-index: 3;
 
     .icon {
@@ -95,7 +95,8 @@ export default Vue.extend({
     animation-delay: -0.1s;
     transition-property: box-shadow, padding, height, top;
     transition-duration: 0.5s;
-    background-color: $dark-color-1;
+    opacity: 1 !important;
+    background-color: var(--v-background-base);
     z-index: 2;
     width: 100vw;
     display: flex;
