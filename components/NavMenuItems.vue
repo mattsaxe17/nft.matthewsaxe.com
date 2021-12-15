@@ -9,7 +9,8 @@
       </div>
       <v-switch v-model="$vuetify.theme.dark" inset color="#e4602f">
         <template #label>
-          <v-icon>mdi-weather-night</v-icon>
+          <v-icon v-if="$vuetify.theme.dark">mdi-weather-night</v-icon>
+          <v-icon v-else>mdi-white-balance-sunny</v-icon>
         </template>
       </v-switch>
     </nav>

@@ -72,7 +72,7 @@ export default Vue.extend({
 
   body #page-content {
     z-index: 1;
-    margin-top: 8em;
+    //margin-top: 8em;
     padding: 2em;
   }
 

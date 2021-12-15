@@ -40,6 +40,7 @@ export default {
     align-items: center;
     white-space: nowrap;
     gap: .5em;
+    font-size: 1.75em;
 
     span {
       color: var(--v-primary-base);

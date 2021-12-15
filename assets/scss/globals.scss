@@ -1,3 +1,13 @@
 $fade-in: fadeInAnimation ease 0.5s backwards;
 $display-font: 'Roboto', sans-serif;
 $main-font: 'Open Sans', sans-serif;
+
+@keyframes fadeInAnimation {
+  0% {
+    transform: translate(0, 0.75em);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
