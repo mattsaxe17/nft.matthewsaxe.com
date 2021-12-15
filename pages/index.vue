@@ -51,7 +51,7 @@ export default {
 section {
   display: flex;
   justify-content: center;
-  padding: 4em 0 8em 0;
+  padding: 4em 0 16em 0;
 
   .section-content {
     max-width: 900px;
@@ -81,12 +81,15 @@ ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  min-width: 300px;
 
   li {
     display: flex;
-    width: 50%;
     align-items: center;
     color: var(--v-accent-lighten3);
+    max-width: 300px;
+    min-width: 150px;
+    width: 50%;
 
     &:before {
       content: url('/arrow.svg');
@@ -97,7 +100,15 @@ ul {
 }
 
 #hero {
-  height: calc(100vh - 8em);
+  height: 100vh;
+  padding-bottom: 0;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+
+  .section-content {
+    max-width: 1000px;
+  }
 
   h1,
   h2,
@@ -114,19 +125,20 @@ ul {
   }
 
   h1 {
-    font-size: max(1.25em, 1.75vw);
+    font-size: 1.25em;
     color: var(--v-primary-base);
     animation-delay: 0.25s;
   }
 
   h2 {
     animation-delay: 0.5s;
-    font-size: max(3em, 4.5vw);
+    font-size: clamp(40px, 8vw, 90px);
   }
 
   h3 {
     animation-delay: 0.75s;
-    font-size: max(2.5em, 3.5vw);
+    font-size: clamp(35px, 7vw, 80px);
+    line-height: .9em;
     padding-bottom: 0.4em;
     color: var(--v-accent-lighten3);
   }
@@ -135,14 +147,18 @@ ul {
     animation-delay: 1s;
     line-height: 1.25em;
     font-size: 1em;
+    padding-bottom: 2em;
+    max-width: 650px;
   }
 
   button {
+    $horizontal-padding: max(2em, 2.5vw);
+    $vertical-padding: max(0.1em, 1.25vw);
     animation-delay: 1.25s;
     background-color: var(--v-secondary-base);
     text-transform: none;
-    padding: 0.5em 2em;
-    font-size: 1em;
+    padding: $vertical-padding $horizontal-padding;
+    font-size: clamp(14px, 3vw, 24px);
   }
 }
 
