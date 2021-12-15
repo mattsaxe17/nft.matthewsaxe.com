@@ -99,7 +99,7 @@ ul {
   }
 }
 
-#hero {
+section#hero {
   height: 100vh;
   padding-bottom: 0;
   padding-top: 0;
@@ -107,7 +107,16 @@ ul {
   align-items: center;
 
   .section-content {
-    max-width: 1000px;
+    padding: 0;
+    max-width: 100%;
+    width: clamp(300px, 90vw, 1100px);
+    display: flex;
+    justify-content: center;
+
+    .nuxt-content {
+      max-width: 100%;
+      width: clamp(300px, 90vw, 1100px);
+    }
   }
 
   h1,
@@ -158,17 +167,7 @@ ul {
     background-color: var(--v-secondary-base);
     text-transform: none;
     padding: $vertical-padding $horizontal-padding;
-    font-size: clamp(14px, 3vw, 24px);
-  }
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    transform: translate(0, 0.75em);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    font-size: clamp(14px, 3vw, 20px);
   }
 }
 </style>
