@@ -38,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 #outer {
   display: inline;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 0;
 
@@ -54,8 +55,8 @@ export default {
 
 @keyframes rotateDownAnimation {
   0% {
-    -webkit-transform: rotateX(90deg);
-    transform: rotateX(90deg);
+    -webkit-transform: translateZ(1em) rotateX(90deg);
+    transform: translateZ(1em) rotateX(90deg);
   }
   8% {
     -webkit-transform: rotateX(0deg);
@@ -66,8 +67,8 @@ export default {
     transform: rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
+    -webkit-transform: translateZ(1em) rotateX(-90deg);
+    transform: translateZ(1em) rotateX(-90deg);
   }
 }
 </style>
