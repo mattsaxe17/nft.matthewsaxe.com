@@ -85,6 +85,7 @@ export default Vue.extend({
   #mobile-menu-drawer-content {
     padding: 2em;
     z-index: 12;
+    height: 100%;
 
     .icon {
       position: fixed;
