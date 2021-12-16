@@ -1,31 +1,30 @@
 <template>
   <div>
     <section id="hero">
-      <nuxt-content :document="hero" />
+      <div class="section-content">
+        <nuxt-content :document="hero" />
+      </div>
     </section>
 
     <section id="about">
-      <section-header>
-        <template #number>00</template>
-        About me
-      </section-header>
-      <nuxt-content :document="about" />
+      <div class="section-content">
+        <section-header number="00" title="About me" />
+        <nuxt-content :document="about" />
+      </div>
     </section>
 
     <section id="projects">
-      <section-header>
-        <template #number>01</template>
-        My projects
-      </section-header>
-      <nuxt-content :document="projects" />
+      <div class="section-content">
+        <section-header number="01" title="My work" />
+        <nuxt-content :document="projects" />
+      </div>
     </section>
 
-    <section id="projects">
-      <section-header>
-        <template #number>02</template>
-        Get in touch
-      </section-header>
-      <nuxt-content :document="contact" />
+    <section id="contact">
+      <div class="section-content">
+        <section-header number="02" title="Get in touch" />
+        <nuxt-content :document="contact" />
+      </div>
     </section>
   </div>
 </template>
@@ -42,7 +41,7 @@ export default {
       hero,
       about,
       projects,
-      contact
+      contact,
     };
   },
 };
@@ -50,7 +49,17 @@ export default {
 
 <style lang="scss">
 section {
-  padding: 4em 0 8em 0;
+  display: flex;
+  justify-content: center;
+  padding: 4em 0 16em 0;
+
+  .section-content {
+    max-width: 900px;
+
+    .nuxt-content-container {
+      padding: 0 2em;
+    }
+  }
 }
 
 h1,
@@ -64,7 +73,7 @@ h6 {
 
 p {
   font-family: $main-font;
-  color: var(--v-accent-lighten3)
+  color: var(--v-accent-lighten3);
 }
 
 ul {
@@ -72,23 +81,43 @@ ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  min-width: 300px;
 
   li {
     display: flex;
-    width: 50%;
     align-items: center;
     color: var(--v-accent-lighten3);
+    max-width: 300px;
+    min-width: 150px;
+    width: 50%;
 
     &:before {
       content: url('/arrow.svg');
       position: relative;
-      padding-right: .25em;
+      padding-right: 0.25em;
     }
   }
 }
 
-#hero {
-  height: calc(100vh - 8em);
+section#hero {
+  height: 100vh;
+  padding-bottom: 0;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+
+  .section-content {
+    padding: 0;
+    max-width: 100%;
+    width: clamp(300px, 90vw, 1100px);
+    display: flex;
+    justify-content: center;
+
+    .nuxt-content {
+      max-width: 100%;
+      width: clamp(300px, 90vw, 1100px);
+    }
+  }
 
   h1,
   h2,
@@ -98,7 +127,7 @@ ul {
   h6,
   p,
   button {
-    padding: 0.25em 0;
+    padding: 0.15em 0;
     animation: $fade-in;
     animation-timing-function: ease-out;
     line-height: 1em;
@@ -112,36 +141,33 @@ ul {
 
   h2 {
     animation-delay: 0.5s;
-    font-size: 3em;
+    font-size: clamp(40px, 8vw, 90px);
   }
 
   h3 {
     animation-delay: 0.75s;
-    font-size: 2.5em;
+    font-size: clamp(35px, 7vw, 80px);
+    line-height: .9em;
     padding-bottom: 0.4em;
-    color: var(--v-accent-lighten3)
+    color: var(--v-accent-lighten3);
   }
 
   p {
     animation-delay: 1s;
     line-height: 1.25em;
+    font-size: 1em;
+    padding-bottom: 2em;
+    max-width: 650px;
   }
 
   button {
+    $horizontal-padding: max(2em, 2.5vw);
+    $vertical-padding: max(0.1em, 1.25vw);
     animation-delay: 1.25s;
     background-color: var(--v-secondary-base);
     text-transform: none;
-    padding: 0.5em 2em;
-  }
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    transform: translate(0, 0.75em);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    padding: $vertical-padding $horizontal-padding;
+    font-size: clamp(14px, 3vw, 20px);
   }
 }
 </style>

@@ -2,7 +2,7 @@
   <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
     <div id="app-bar" ref="appBar">
       <nuxt-link to="/" class="menu-link logo">
-        <img src="/logo.svg" alt="logo" @click="scrollToTop"/>
+        <img src="/logo.svg" alt="logo" @click="scrollToTop" />
       </nuxt-link>
 
       <v-spacer />
@@ -15,6 +15,7 @@
         <img class="icon" src="/x.svg" @click="toggleNavDrawer" />
         <nav-menu-items mobile />
       </div>
+      <social-bar position="right" />
     </v-navigation-drawer>
 
     <div id="page-content">
@@ -22,6 +23,8 @@
         <Nuxt />
       </v-main>
     </div>
+
+    <social-bar position="right" fixed desktop-only/>
   </v-app>
 </template>
 
@@ -48,7 +51,8 @@ export default Vue.extend({
 
       appBar.style.top = this.scrollPos > currentScrollPos || currentScrollPos < 30 ? '0' : '-100%';
       appBar.style.boxShadow = currentScrollPos < 30 ? 'none' : '0 10px 30px -10px black';
-      appBar.style.paddingTop = currentScrollPos < 30 ? '2em' : '1em';
+      appBar.style.paddingTop = currentScrollPos < 30 ? '2em' : '1.5em';
+      appBar.style.paddingBottom = currentScrollPos < 30 ? '2em' : '1.5em';
       appBar.style.height = currentScrollPos < 30 ? '8em' : '6em';
 
       this.scrollPos = currentScrollPos;
@@ -71,8 +75,7 @@ export default Vue.extend({
 
   body #page-content {
     z-index: 1;
-    margin-top: 8em;
-    padding: 2em;
+    padding: 2em 4em;
   }
 
   .icon {
@@ -81,7 +84,8 @@ export default Vue.extend({
 
   #mobile-menu-drawer-content {
     padding: 2em;
-    z-index: 3;
+    z-index: 12;
+    height: 100%;
 
     .icon {
       position: fixed;
