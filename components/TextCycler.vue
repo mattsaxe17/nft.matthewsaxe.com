@@ -38,12 +38,13 @@ export default {
 <style lang="scss" scoped>
 #outer {
   display: inline;
-  //-webkit-perspective: 1em;
-  //perspective: 1em;
+  backface-visibility: hidden;
+  z-index: 0;
 
   #inner {
     display: inline-block;
     position: relative;
+    z-index: 1;
 
     &.active {
       animation: rotateDownAnimation ease-in-out 3000ms infinite;
