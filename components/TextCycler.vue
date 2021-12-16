@@ -38,8 +38,8 @@ export default {
 <style lang="scss" scoped>
 #outer {
   display: inline;
-  -webkit-perspective: 1em;
-  perspective: 1em;
+  //-webkit-perspective: 1em;
+  //perspective: 1em;
 
   #inner {
     display: inline-block;
@@ -47,7 +47,6 @@ export default {
 
     &.active {
       animation: rotateDownAnimation ease-in-out 3000ms infinite;
-      //animation-timing-function: cubic-bezier(0.000, 0.775, 1.000, 0.020);;
     }
   }
 }
