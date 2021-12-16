@@ -41,6 +41,7 @@ export default {
     white-space: nowrap;
     gap: .5em;
     font-size: 1.75em;
+    padding: 0 1em;
 
     span {
       color: var(--v-primary-base);
