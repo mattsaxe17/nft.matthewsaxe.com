@@ -58,13 +58,15 @@ export default {
     -webkit-transform: translateZ(-1em) rotateX(90deg);
     transform: translateZ(-1em) rotateX(90deg);
   }
-  8% {
+  10% {
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
+    padding-right: 0;
   }
-  92% {
+  90% {
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
+    padding-right: 0;
   }
   100% {
     -webkit-transform: translateZ(-1em) rotateX(-90deg);

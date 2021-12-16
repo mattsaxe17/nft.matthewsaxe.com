@@ -24,14 +24,18 @@
       </v-main>
     </div>
 
-    <social-bar position="right" fixed desktop-only/>
+    <social-bar position="right" fixed desktop-only />
+
+    <watermark>Saxe</watermark>
   </v-app>
 </template>
 
 <script>
 import Vue from 'vue';
+import Watermark from '~/components/Watermark.vue';
 
 export default Vue.extend({
+  components: { Watermark },
   name: 'DefaultLayout',
   data() {
     return {
