@@ -154,7 +154,7 @@ section#hero {
     display: flex;
     justify-content: center;
 
-    .nuxt-content {
+    .nuxt-content-container {
       max-width: 100%;
       width: clamp(300px, 90vw, 1100px);
     }
