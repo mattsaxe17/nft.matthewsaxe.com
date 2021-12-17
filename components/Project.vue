@@ -1,6 +1,6 @@
 <template>
   <div id="project">
-    <img :src="image" />
+    <div id="image"></div>
   </div>
 </template>
 
@@ -9,28 +9,26 @@ export default {
   props: {
     image: {
       type: String,
-      required: true
+      required: true,
     },
     name: {
       type: String,
-      required: true
+      required: true,
     },
     details: {
       type: String,
-      required: true
+      required: true,
     },
     link: {
       type: String,
-      default: null
+      default: null,
     },
     githubLink: {
       type: String,
-      default: null
-    }
-  }
-}
+      default: null,
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
