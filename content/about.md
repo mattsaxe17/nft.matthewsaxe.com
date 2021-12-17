@@ -10,9 +10,23 @@ I love to discuss cryptocurrency, blockchain, data structures, NFTs, and anythin
 
 <br />
 
-- JavaScript (ES6)
-- Vue.js
-- Node.js
-- React
-- Nuxt
-- Sass
+<div class="container">
+
+  <div id="about-list-wrapper">
+
+  - JavaScript
+  - Vue.js
+  - Node.js
+  - React
+  - Nuxt
+  - Sass
+  - .NET MVC
+  - SQL Server
+
+  </div>
+
+  <div id="about-image-wrapper">
+    <img src="/portrait.jpg" id="about-image" />
+  </div>
+
+</div>

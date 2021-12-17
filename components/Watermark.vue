@@ -19,7 +19,7 @@ export default {}
   bottom: -4vh;
   right: 2vw;
   color: var(--v-background-darken1);
-  opacity: .125;
+  opacity: .075;
   font-family: monospace;
   transform: rotate(-17deg);
 
