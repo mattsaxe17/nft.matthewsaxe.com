@@ -77,9 +77,11 @@ export default Vue.extend({
 * {
   cursor: default;
 
-  body #page-content {
-    z-index: 1;
-    padding-top: 2em;
+  body {
+    #page-content {
+      z-index: 1;
+      padding-top: 2em;
+    }
   }
 
   .icon {

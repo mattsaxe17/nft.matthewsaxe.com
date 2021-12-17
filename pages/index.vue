@@ -91,7 +91,7 @@ section {
         align-items: center;
         color: var(--v-accent-lighten3);
         width: 50%;
-        padding: .2em 0;
+        padding: 0.2em 0;
 
         &:before {
           content: url('/arrow.svg');
@@ -218,14 +218,14 @@ section#hero {
   }
   100% {
     transform: translate(0.2em, 1em) scale(1.25);
-    filter: grayscale(.5);
+    filter: grayscale(0.5);
   }
 }
 
 @keyframes out {
   0% {
     transform: translate(0.2em, 1em) scale(1.25);
-    filter: grayscale(.5);
+    filter: grayscale(0.5);
   }
   100% {
     transform: translate(1.5em, 3em);
