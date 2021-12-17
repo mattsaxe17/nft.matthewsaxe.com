@@ -104,14 +104,14 @@ section {
 
   #about-image-wrapper {
     width: 350px;
-    max-width: 100%;
+    max-width: 95vw;
     border-radius: 0.6em;
     border: 3px solid var(--v-primary-base);
     margin-right: 1em;
 
     #about-image {
       width: 350px;
-      max-width: 100%;
+      max-width: 95vw;
       height: 100%;
       border-radius: 0.5em;
       filter: grayscale(1);
@@ -217,14 +217,14 @@ section#hero {
     transform: translate(1.5em, 3em);
   }
   100% {
-    transform: translate(0.2em, 1em) scale(1.25);
+    transform: translate(0.2em, 1em) scale(1.1);
     filter: grayscale(0.5);
   }
 }
 
 @keyframes out {
   0% {
-    transform: translate(0.2em, 1em) scale(1.25);
+    transform: translate(0.2em, 1em) scale(1.1);
     filter: grayscale(0.5);
   }
   100% {
