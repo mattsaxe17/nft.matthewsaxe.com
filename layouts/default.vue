@@ -18,7 +18,7 @@
       <social-bar position="right" />
     </v-navigation-drawer>
 
-    <div id="page-content">
+    <div id="page-content" class="mx-xs-0 mx-xs-md-3">
       <v-main>
         <Nuxt />
       </v-main>
@@ -35,8 +35,8 @@ import Vue from 'vue';
 import Watermark from '~/components/Watermark.vue';
 
 export default Vue.extend({
-  components: { Watermark },
   name: 'DefaultLayout',
+  components: { Watermark },
   data() {
     return {
       scrollPos: 0,
@@ -79,7 +79,7 @@ export default Vue.extend({
 
   body #page-content {
     z-index: 1;
-    padding: 2em 4em;
+    padding-top: 2em;
   }
 
   .icon {
