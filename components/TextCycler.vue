@@ -6,12 +6,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      currentInterval: null,
-      currentInd: 0,
-    };
-  },
   props: {
     options: {
       type: Array,
@@ -21,6 +15,12 @@ export default {
       type: Number,
       default: 3000,
     },
+  },
+  data() {
+    return {
+      currentInterval: null,
+      currentInd: 0,
+    };
   },
   mounted() {
     this.currentInterval = setInterval(() => {
