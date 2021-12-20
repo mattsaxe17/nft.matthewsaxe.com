@@ -10,7 +10,7 @@ I love to discuss cryptocurrency, blockchain, data structures, NFTs, and anythin
 
 <br />
 
-<div class="container">
+<m-container>
 
   <div id="about-list-wrapper">
 
@@ -29,4 +29,4 @@ I love to discuss cryptocurrency, blockchain, data structures, NFTs, and anythin
     <img src="/portrait.jpg" id="about-image" />
   </div>
 
-</div>
+</m-container>

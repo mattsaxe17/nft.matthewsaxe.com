@@ -23,10 +23,8 @@
 
 </project>
 
-<project name="matthewsaxe.com" link="/" image="/personal-site.png" :stack="['Vue.js', 'Nuxt', 'Sass', 'TypeScript']">
+<project name="matthewsaxe.com" link="/" github-link="https://github.com/mattsaxe17/personal-site" image="/personal-site.png" :stack="['Vue', 'Nuxt', 'Sass', 'TypeScript']">
 
   blah blah
 
 </project>
-
-<h3>Check out my other work on my <a href="https://github.com/mattsaxe17?tab=repositories" target="_blank">GitHub!</a></h3>

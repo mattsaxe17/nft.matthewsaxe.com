@@ -76,7 +76,7 @@ export default {
       height: 100%;
       top: 0;
       left: 0;
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(150, 150, 150, 0.2);
       transition: all 0.5s;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
