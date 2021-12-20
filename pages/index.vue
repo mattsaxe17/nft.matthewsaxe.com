@@ -201,7 +201,7 @@ section#hero {
     max-width: 650px;
   }
 
-  button {
+  .v-btn {
     $horizontal-padding: max(2em, 2.5vw);
     $vertical-padding: max(0.1em, 1.25vw);
     animation-delay: 1.25s;
