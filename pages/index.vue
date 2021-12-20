@@ -26,6 +26,10 @@
         <nuxt-content :document="contact" />
       </div>
     </section>
+
+    <m-footer>
+      <nuxt-content :document="footer" />
+    </m-footer>
   </div>
 </template>
 
@@ -36,12 +40,14 @@ export default {
     const about = await $content('about').fetch();
     const projects = await $content('projects').fetch();
     const contact = await $content('contact').fetch();
+    const footer = await $content('footer').fetch();
 
     return {
       hero,
       about,
       projects,
       contact,
+      footer
     };
   },
 };
@@ -187,7 +193,7 @@ section#hero {
 
   h3 {
     animation-delay: 0.75s;
-    font-size: clamp(35px, 7vw, 80px);
+    font-size: clamp(35px, 6.5vw, 75px);
     line-height: 0.9em;
     padding-bottom: 0.4em;
     color: var(--v-accent-lighten3);

@@ -28,7 +28,7 @@ export default {
 <style lang="scss" scoped>
 .section-header {
   display: flex;
-  padding-bottom: 3em;
+  padding-bottom: 5em;
 
   .number {
     font-size: .8em;

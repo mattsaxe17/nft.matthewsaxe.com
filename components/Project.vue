@@ -1,16 +1,23 @@
 <template>
   <div id="project">
-    <div id="image" :style="{ backgroundImage: `url('${image}')` }">
-      <div id="content">
+    <div id="image" :style="{ backgroundImage: `url('${image}')` }" :class="{ dark: $vuetify.theme.dark }">
+      <div id="content" class="d-none d-md-block">
         <p class="highlighted">Featured</p>
         <h3>{{ name }}</h3>
-        <p><slot></slot></p>
+        <p id="description"><slot></slot></p>
         <p class="highlighted">{{ stack.join('&nbsp;&nbsp;&nbsp;') }}</p>
       </div>
       <div id="links">
         <a v-if="link" :href="link" target="_blank"><v-icon>mdi-open-in-new</v-icon></a>
         <a v-if="githubLink" :href="githubLink" target="_blank"><v-icon>mdi-github</v-icon></a>
       </div>
+    </div>
+
+    <div id="mobile-content" class="d-block d-md-none">
+      <p class="highlighted">Featured</p>
+      <h3>{{ name }}</h3>
+      <p><slot></slot></p>
+      <p class="highlighted">{{ stack.join('&nbsp;&nbsp;&nbsp;') }}</p>
     </div>
   </div>
 </template>
@@ -47,6 +54,12 @@ export default {
   width: 100%;
   resize: horizontal;
   margin-bottom: 8em;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5em;
+
+  &:hover {
+    box-shadow: 0px 0px 8px 2px var(--v-accent-base);
+  }
 
   #image {
     position: relative;
@@ -63,15 +76,21 @@ export default {
       height: 100%;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(255, 255, 255, 0.4);
       transition: all 0.5s;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
       z-index: 4;
     }
 
+    &.dark {
+      &:after {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    }
+
     &:hover {
-      opacity: 0.65;
+      opacity: 1;
 
       &:after {
         display: none;
@@ -83,8 +102,26 @@ export default {
 
       #links {
         a {
-          background: rgba(0, 0, 0, 0.8);
+          background: rgba(255, 255, 255, 0.8);
           border-radius: 100%;
+
+          i {
+            color: black;
+          }
+        }
+      }
+
+      &.dark {
+        opacity: .65;
+
+        #links {
+          a {
+            background: rgba(0, 0, 0, 0.8);
+
+            i {
+              color: white;
+            }
+          }
         }
       }
     }
@@ -95,6 +132,10 @@ export default {
       padding: 3.5em;
       width: 100%;
       height: 100%;
+
+      #description {
+        text-shadow: 1px 1px 1px #000;
+      }
 
       h3 {
         font-size: 2em;
@@ -120,8 +161,29 @@ export default {
 
       a {
         text-decoration: none;
-        padding: .4em;
+        margin-right: 0.25em;
+        padding: 0.4em;
       }
+    }
+  }
+
+  #mobile-content {
+    padding: 1.5em;
+
+    h3 {
+      font-size: 1.5em;
+      padding-bottom: 0.5em;
+    }
+
+    p {
+      &.highlighted {
+        margin: 0;
+        color: var(--v-primary-base);
+      }
+    }
+
+    & + #image {
+      margin-left: 2em;
     }
   }
 }
