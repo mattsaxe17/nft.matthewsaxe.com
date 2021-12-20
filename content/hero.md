@@ -13,4 +13,4 @@ textCyclerOptions:
 
 I'm a software engineer building fast, reponsive websites and applications. My inbox is open, let's see what I can build for you.
 
-<m-button link="#contact" colored>Hire me</m-button>
+<m-button href="#contact" colored>Hire me</m-button>

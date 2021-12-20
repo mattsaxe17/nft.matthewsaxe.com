@@ -1,5 +1,5 @@
 <template>
-  <v-btn :text="text" :href="link" :class="{ colored }">
+  <v-btn :text="text" :href="href" :class="{ colored }">
     <slot></slot>
   </v-btn>
 </template>
@@ -12,7 +12,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    link: {
+    href: {
       type: String,
       default: null,
     },
