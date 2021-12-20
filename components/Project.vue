@@ -54,7 +54,7 @@ export default {
   width: 100%;
   resize: horizontal;
   margin-bottom: 8em;
-  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.8);
   border-radius: 0.5em;
 
   &:hover {
@@ -62,8 +62,8 @@ export default {
   }
 
   p.description {
-    font-size: 1.2em;
-    color: var(--v-anchor-base);
+    font-size: 1.25em;
+    color: var(--v-accent-darken3);
   }
 
   #image {
@@ -81,7 +81,7 @@ export default {
       height: 100%;
       top: 0;
       left: 0;
-      background: rgba(150, 150, 150, 0.2);
+      background: rgba(255, 255, 255, 0.75);
       transition: all 0.5s;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
@@ -91,6 +91,11 @@ export default {
     &.dark {
       &:after {
         background: rgba(0, 0, 0, 0.7);
+      }
+
+      p.description {
+        font-size: 1.25em;
+        color: var(--v-accent-lighten3);
       }
     }
 
@@ -117,7 +122,7 @@ export default {
       }
 
       &.dark {
-        opacity: .65;
+        opacity: 0.65;
 
         #links {
           a {
@@ -132,15 +137,12 @@ export default {
     }
 
     #content {
+      backdrop-filter: blur(2px);
       z-index: 5;
       position: absolute;
       padding: 3.5em;
       width: 100%;
       height: 100%;
-
-      .description {
-        text-shadow: 1px 1px 1px #000;
-      }
 
       h3 {
         font-size: 2em;
