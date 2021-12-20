@@ -206,7 +206,6 @@ section#hero {
     $vertical-padding: max(0.1em, 1.25vw);
     animation-delay: 1.25s;
     background-color: var(--v-secondary-base);
-    text-transform: none;
     padding: $vertical-padding $horizontal-padding;
     font-size: clamp(14px, 3vw, 20px);
   }
