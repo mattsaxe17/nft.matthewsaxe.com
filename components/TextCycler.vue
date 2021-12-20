@@ -6,28 +6,24 @@
 
 <script>
 export default {
+  props: {
+    options: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
       currentInterval: null,
       currentInd: 0,
     };
   },
-  props: {
-    options: {
-      type: Array,
-      required: true,
-    },
-    interval: {
-      type: Number,
-      default: 3000,
-    },
-  },
   mounted() {
     this.currentInterval = setInterval(() => {
       this.currentInd = this.currentInd === this.options.length - 1 ? 0 : this.currentInd + 1;
       this.$refs.inner.classList.remove('active');
       this.$refs.inner.classList.add('active');
-    }, this.interval);
+    }, 3000);
   },
   beforeDestroy() {
     this.currentInterval = null;

@@ -1,7 +1,7 @@
 <template>
   <div id="social-bar" :class="{ right: position === 'right', left: position === 'left', fixed, 'd-none': desktopOnly, 'd-md-flex': desktopOnly }">
     <div>
-      <a href="mailto:mattsaxe17@gmail.com" target="_blank">
+      <a href="mailto:matt@matthewsaxe.com" target="_blank">
         <v-icon>mdi-gmail</v-icon>
       </a>
     </div>
