@@ -1,6 +1,6 @@
 <template>
-  <m-container>
-    <v-card elevation="4">
+  <div id="contact-container">
+    <v-card elevation="4" width="100%">
       <v-card-title>By phone&nbsp;&nbsp;<v-icon>mdi-phone</v-icon></v-card-title>
       <v-card-text>{{ phoneText }}</v-card-text>
       <v-card-actions>
@@ -9,21 +9,21 @@
       </v-card-actions>
     </v-card>
 
-    <v-card elevation="4">
+    <v-card elevation="4" width="100%">
       <v-card-title>By email&nbsp;&nbsp;<v-icon>mdi-email</v-icon></v-card-title>
       <v-card-text>{{ emailText }}</v-card-text>
       <v-card-actions>
         <m-button :href="`mailto:${email}`" colored> Email me </m-button>
       </v-card-actions>
     </v-card>
-  </m-container>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
     phone: {
-      type: Number,
+      type: String,
       required: true,
     },
     email: {
@@ -41,3 +41,15 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+#contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  button {
+    background-color: var(--v-secondary-base);
+  }
+}
+</style>

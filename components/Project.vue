@@ -4,7 +4,7 @@
       <div id="content" class="d-none d-md-block">
         <p class="highlighted">Featured</p>
         <h3>{{ name }}</h3>
-        <p id="description"><slot></slot></p>
+        <p class="description"><slot></slot></p>
         <p class="highlighted">{{ stack.join('&nbsp;&nbsp;&nbsp;') }}</p>
       </div>
       <div id="links">
@@ -16,7 +16,7 @@
     <div id="mobile-content" class="d-block d-md-none">
       <p class="highlighted">Featured</p>
       <h3>{{ name }}</h3>
-      <p><slot></slot></p>
+      <p class="description"><slot></slot></p>
       <p class="highlighted">{{ stack.join('&nbsp;&nbsp;&nbsp;') }}</p>
     </div>
   </div>
@@ -59,6 +59,11 @@ export default {
 
   &:hover {
     box-shadow: 0px 0px 8px 2px var(--v-accent-base);
+  }
+
+  p.description {
+    font-size: 1.2em;
+    color: var(--v-anchor-base);
   }
 
   #image {
@@ -133,7 +138,7 @@ export default {
       width: 100%;
       height: 100%;
 
-      #description {
+      .description {
         text-shadow: 1px 1px 1px #000;
       }
 

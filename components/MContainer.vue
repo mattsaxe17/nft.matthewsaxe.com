@@ -6,7 +6,13 @@
 
 <style lang="scss">
 .container {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 960px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 </style>

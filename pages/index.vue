@@ -149,6 +149,11 @@ section#hero {
     display: flex;
     justify-content: center;
 
+    .nuxt-content {
+      max-width: 100%;
+      width: clamp(300px, 90vw, 1100px);
+    }
+
     .nuxt-content-container {
       max-width: 100%;
       width: clamp(300px, 90vw, 1100px);
@@ -218,19 +223,6 @@ section#hero {
       display: flex;
       flex-direction: column;
       align-items: center;
-
-      .container {
-        gap: 2em;
-
-        .v-card {
-          width: 100%;
-          max-width: 500px;
-        }
-
-        button {
-          background-color: var(--v-secondary-base);
-        }
-      }
     }
   }
 }
