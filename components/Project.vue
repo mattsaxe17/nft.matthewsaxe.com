@@ -1,22 +1,16 @@
 <template>
   <div id="project">
     <div id="image" :style="{ backgroundImage: `url('${image}')` }" :class="{ dark: $vuetify.theme.dark }">
-      <div id="content" class="d-none d-md-block">
-        <p class="highlighted">Featured</p>
-        <h3>{{ name }}</h3>
-        <p id="description"><slot></slot></p>
-        <p class="highlighted">{{ stack.join('&nbsp;&nbsp;&nbsp;') }}</p>
-      </div>
       <div id="links">
         <a v-if="link" :href="link" target="_blank"><v-icon>mdi-open-in-new</v-icon></a>
         <a v-if="githubLink" :href="githubLink" target="_blank"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
 
-    <div id="mobile-content" class="d-block d-md-none">
+    <div id="content">
       <p class="highlighted">Featured</p>
       <h3>{{ name }}</h3>
-      <p><slot></slot></p>
+      <p class="description"><slot></slot></p>
       <p class="highlighted">{{ stack.join('&nbsp;&nbsp;&nbsp;') }}</p>
     </div>
   </div>
@@ -54,11 +48,16 @@ export default {
   width: 100%;
   resize: horizontal;
   margin-bottom: 8em;
-  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.8);
   border-radius: 0.5em;
 
   &:hover {
     box-shadow: 0px 0px 8px 2px var(--v-accent-base);
+  }
+
+  p.description {
+    font-size: 1.25em;
+    color: var(--v-accent-darken3);
   }
 
   #image {
@@ -66,8 +65,8 @@ export default {
     width: 100%;
     background-size: cover;
     padding-bottom: 52%;
-    border-radius: 0.5em;
     overflow: hidden;
+    border-radius: 0.5em 0.5em 0 0;
 
     &:after {
       content: '\A';
@@ -76,7 +75,7 @@ export default {
       height: 100%;
       top: 0;
       left: 0;
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0) !important;
       transition: all 0.5s;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
@@ -87,66 +86,10 @@ export default {
       &:after {
         background: rgba(0, 0, 0, 0.7);
       }
-    }
 
-    &:hover {
-      opacity: 1;
-
-      &:after {
-        display: none;
-      }
-
-      #content {
-        opacity: 0;
-      }
-
-      #links {
-        a {
-          background: rgba(255, 255, 255, 0.8);
-          border-radius: 100%;
-
-          i {
-            color: black;
-          }
-        }
-      }
-
-      &.dark {
-        opacity: .65;
-
-        #links {
-          a {
-            background: rgba(0, 0, 0, 0.8);
-
-            i {
-              color: white;
-            }
-          }
-        }
-      }
-    }
-
-    #content {
-      z-index: 5;
-      position: absolute;
-      padding: 3.5em;
-      width: 100%;
-      height: 100%;
-
-      #description {
-        text-shadow: 1px 1px 1px #000;
-      }
-
-      h3 {
-        font-size: 2em;
-        padding-bottom: 1em;
-      }
-
-      p {
-        &.highlighted {
-          margin: 0;
-          color: var(--v-primary-base);
-        }
+      p.description {
+        font-size: 1.25em;
+        color: var(--v-accent-lighten3);
       }
     }
 
@@ -163,11 +106,13 @@ export default {
         text-decoration: none;
         margin-right: 0.25em;
         padding: 0.4em;
+        border-radius: 100%;
+        backdrop-filter: blur(10px);
       }
     }
   }
 
-  #mobile-content {
+  #content {
     padding: 1.5em;
 
     h3 {
@@ -181,9 +126,11 @@ export default {
         color: var(--v-primary-base);
       }
     }
+  }
 
-    & + #image {
-      margin-left: 2em;
+  #image.dark + #content {
+    p.description {
+      color: var(--v-accent-lighten3);
     }
   }
 }

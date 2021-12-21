@@ -6,16 +6,20 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - matthewsaxe.com',
-    title: 'matthewsaxe.com',
+    title: 'Matthew Saxe',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'I\'m a freelance software engineer building fast, reponsive websites and applications in the Wilkes-Barre, PA area. My inbox is open, let\'s see what I can build for you.' },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'og:image', content: 'https://matthewsaxe.com/personal-site.png' },
+      { name: 'og:image:type', content: 'image/png' },
+      { name: 'og:description', content: 'I\'m a freelance software engineer building fast, reponsive websites and applications in the Wilkes-Barre, PA area. My inbox is open, let\'s see what I can build for you.' },
+      { name: 'og:title', content: 'Matthew Saxe' },
+      { name: 'og:url', content: 'https://matthewsaxe.com' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },

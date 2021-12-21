@@ -1,5 +1,5 @@
 <template>
-  <v-btn :text="text" @click="window.location.href = link ? link : window.location.href">
+  <v-btn :text="text" :href="href" :class="{ colored }">
     <slot></slot>
   </v-btn>
 </template>
@@ -12,12 +12,19 @@ export default {
       type: Boolean,
       default: false,
     },
-    link: {
+    href: {
       type: String,
       default: null,
     },
+    colored: {
+      type: Boolean
+    }
   },
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+a.colored {
+  background-color: var(--v-secondary-base) !important;
+}
+</style>
