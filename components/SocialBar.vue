@@ -16,6 +16,11 @@
       </a>
     </div>
     <div>
+      <a href="https://www.facebook.com/mattsaxe17" target="_blank">
+        <v-icon>mdi-facebook</v-icon>
+      </a>
+    </div>
+    <div>
       <a href="https://twitter.com/mattsaxe17" target="_blank">
         <v-icon>mdi-twitter</v-icon>
       </a>
