@@ -2,7 +2,7 @@ Hello! My name is Matt and I have many passions. I love to workout, try new food
 
 Nowadays, I work as a programmer and a freelance software engineer where I aim to build incredible websites for clients. My experience extends from front-end design to servers and databases, and I love a challenge. Check out my <m-link new-tab href="https://github.com/mattsaxe17">Github</m-link> to see what I'm up to!
 
-I love to discuss cryptocurrency, blockchain, data structures, NFTs, and anything software. Reach out however you'de like - I'd love to talk.
+I love to discuss cryptocurrency, blockchain, data structures, NFTs, and anything software. Reach out however you'd like - I'd love to talk.
 
 <br />
 
