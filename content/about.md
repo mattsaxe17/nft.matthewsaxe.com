@@ -6,13 +6,23 @@ I love to discuss cryptocurrency, blockchain, data structures, NFTs, and anythin
 
 <br />
 
-#### What I've been working with lately:
-
-<br />
-
 <m-container>
 
   <div id="about-list-wrapper">
+
+  #### My services:
+
+  - Websites
+  - Web apps
+  - Web security
+  - Logo design
+  - System design
+  - Wix sites
+
+  <br />
+  <br />
+
+  #### What I've been working with lately:
 
   - JavaScript
   - Vue.js
