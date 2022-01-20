@@ -4,7 +4,7 @@
 </project>
 
 <project name="Ideal Strength Calculator" link="http://idealstrengthcalculator.com/" image="/isc.png" :stack="['Vanilla HTML, CSS, and JavaScript']">
-  How much should I be able to bench press? Find out with Ideal Strength Calculator, an easy way to discover your relative strength between several exercises. <i>*Domin is currently being transferred</i>
+  How much should I be able to bench press? Find out with Ideal Strength Calculator, an easy way to discover your relative strength between several exercises.
 </project>
 
 <project name="barnyard.js" github-link="https://github.com/mattsaxe17/barnyardjs" image="/barnyard.png" :stack="['Node', 'Rooster.js', 'Sass']">
