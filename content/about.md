@@ -15,7 +15,6 @@ I love to discuss cryptocurrency, blockchain, data structures, NFTs, and anythin
   - Websites
   - Web apps
   - Web security
-  - Logo design
   - System design
   - Wix sites
 
