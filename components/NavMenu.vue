@@ -1,29 +1,20 @@
 <template>
   <div id="nav-bar">
-    <div id="desktop-menu" class="d-none d-md-block">
-      <nav-menu-items />
-    </div>
+    <div id="menu">
+      <nuxt-link to="/#about" class="menu-link">Connect wallet</nuxt-link>
 
-    <div id="mobile-menu" class="d-md-none">
-      <img src="/menu.svg" alt="menu icon" @click="$emit('toggleNavDrawer')" />
+      <v-switch v-model="$vuetify.theme.dark" inset color="#e4602f">
+        <template #label>
+          <v-icon v-if="$vuetify.theme.dark">mdi-weather-night</v-icon>
+          <v-icon v-else>mdi-white-balance-sunny</v-icon>
+        </template>
+      </v-switch>
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import NavMenuItems from './NavMenuItems.vue';
-
-export default Vue.extend({
-  components: {
-    NavMenuItems,
-  },
-  props: {
-    navDrawer: {
-      type: Boolean
-    }
-  }
-});
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -31,13 +22,11 @@ export default Vue.extend({
   height: 50%;
   display: flex;
   align-items: center;
+}
 
-  #mobile-menu {
-    height: 100%;
-
-    img {
-      height: 1.5em;
-    }
-  }
+#menu {
+  display: flex;
+  align-items: center;
+  gap: 2em;
 }
 </style>
