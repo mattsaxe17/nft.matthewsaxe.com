@@ -7,16 +7,8 @@
 
       <v-spacer />
 
-      <nav-menu :nav-drawer="navDrawer" @toggleNavDrawer="toggleNavDrawer" />
+      <nav-menu />
     </div>
-
-    <v-navigation-drawer v-model="navDrawer" class="d-md-none" right fixed>
-      <div id="mobile-menu-drawer-content">
-        <img class="icon" src="/x.svg" @click="toggleNavDrawer" />
-        <nav-menu-items mobile />
-      </div>
-      <social-bar position="right" />
-    </v-navigation-drawer>
 
     <div id="page-content" class="mx-xs-0 mx-xs-md-3">
       <v-main>
@@ -24,9 +16,7 @@
       </v-main>
     </div>
 
-    <social-bar position="right" fixed desktop-only />
-
-    <watermark>Saxe</watermark>
+    <watermark>NFT</watermark>
   </v-app>
 </template>
 
@@ -63,9 +53,6 @@ export default Vue.extend({
     };
   },
   methods: {
-    toggleNavDrawer() {
-      this.navDrawer = !this.navDrawer;
-    },
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     },
@@ -80,24 +67,12 @@ export default Vue.extend({
   body {
     #page-content {
       z-index: 1;
-      padding-top: 2em;
+      padding-top: 8em;
     }
   }
 
   .icon {
     height: 1.5em;
-  }
-
-  #mobile-menu-drawer-content {
-    padding: 2em;
-    z-index: 12;
-    height: 100%;
-
-    .icon {
-      position: fixed;
-      top: 2em;
-      right: 2em;
-    }
   }
 
   #app-bar {
