@@ -59,5 +59,6 @@ export default {
   justify-content: center;
   gap: 1.5em;
   grid-template-columns: repeat(auto-fit, min(20em, 40%));
+  margin: auto;
 }
 </style>

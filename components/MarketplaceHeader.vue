@@ -41,6 +41,7 @@ export default {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 1em;
+    text-align: center;
   }
 }
 </style>
