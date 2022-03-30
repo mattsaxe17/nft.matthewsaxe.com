@@ -30,13 +30,7 @@ export default Vue.extend({
   data() {
     return {
       scrollPos: 0,
-      navDrawer: null,
     };
-  },
-  computed: {
-    theme() {
-      return this.$vuetify.theme.dark ? 'dark' : 'light';
-    },
   },
   mounted() {
     window.onscroll = () => {
@@ -57,6 +51,11 @@ export default Vue.extend({
       window.scrollTo({ top: 0, behavior: 'smooth' });
     },
   },
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? 'dark' : 'light';
+    },
+  },
 });
 </script>
 
@@ -64,40 +63,8 @@ export default Vue.extend({
 * {
   cursor: default;
 
-  body {
-    #page-content {
-      z-index: 1;
-      padding-top: 8em;
-    }
-  }
-
   .icon {
     height: 1.5em;
-  }
-
-  #app-bar {
-    animation: $fade-in;
-    animation-delay: -0.1s;
-    transition-property: box-shadow, padding, height, top;
-    transition-duration: 0.5s;
-    opacity: 1 !important;
-    background-color: var(--v-background-base);
-    z-index: 2;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    height: 8em;
-    padding: 2em;
-
-    .logo {
-      height: 100%;
-
-      img {
-        height: 100%;
-        cursor: pointer;
-      }
-    }
   }
 }
 </style>
