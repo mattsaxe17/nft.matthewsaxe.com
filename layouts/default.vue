@@ -1,9 +1,9 @@
 <template>
   <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
     <div id="app-bar" ref="appBar">
-      <nuxt-link to="/" class="menu-link logo">
+      <a href="https://matthewsaxe.com" class="menu-link logo">
         <img src="/logo.svg" alt="logo" @click="scrollToTop" />
-      </nuxt-link>
+      </a>
 
       <v-spacer />
 
