@@ -18,7 +18,7 @@
     "nuxt": "^2.15.7",
     "truffle": "^5.5.3",
     "vuetify": "^2.5.5",
-    "web3": "^1.7.0"
+    "web3": "^1.7.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

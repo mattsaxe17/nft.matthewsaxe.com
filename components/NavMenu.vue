@@ -1,7 +1,7 @@
 <template>
   <div id="nav-bar">
     <div id="menu">
-      <nuxt-link to="/#about" class="menu-link">Connect wallet</nuxt-link>
+      <button>Connect Wallet</button>
 
       <v-switch v-model="$vuetify.theme.dark" inset color="#e4602f">
         <template #label>
@@ -28,5 +28,9 @@ export default {}
   display: flex;
   align-items: center;
   gap: 2em;
+
+  button {
+    cursor: not-allowed;
+  }
 }
 </style>
