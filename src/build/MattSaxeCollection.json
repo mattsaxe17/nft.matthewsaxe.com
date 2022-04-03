@@ -1,0 +1,95 @@
+{
+  "contractName": "MattSaxeCollection",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/src/contracts/MattSaxeCollection.sol\":\"MattSaxeCollection\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/contracts/MattSaxeCollection.sol\":{\"keccak256\":\"0x7956a5834fd548aaeb290f797dccc857d626a14b818df1e9c2dced2571fe118e\",\"urls\":[\"bzz-raw://72ea620e4896cd058e4fcdb5ab3e489f11c47ff3971018b3476c566a8dd04c1f\",\"dweb:/ipfs/QmU9W8EwVj8QGcp7i3c7JtpxikKBfF9uyo5YXmRbL8u4FM\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220b07665bc3802a851397cc77ffa22fab1aa84f75aacbca8ec0a5e03746fd048a164736f6c634300080d0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220b07665bc3802a851397cc77ffa22fab1aa84f75aacbca8ec0a5e03746fd048a164736f6c634300080d0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "0:32:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "0:32:0:-:0;;;;;",
+  "source": "contract MattSaxeCollection {\n\n}",
+  "sourcePath": "/Users/mattsaxe17/repos/personal-nft-marketplace/src/contracts/MattSaxeCollection.sol",
+  "ast": {
+    "absolutePath": "project:/src/contracts/MattSaxeCollection.sol",
+    "exportedSymbols": {
+      "MattSaxeCollection": [
+        1
+      ]
+    },
+    "id": 2,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "MattSaxeCollection",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1,
+        "linearizedBaseContracts": [
+          1
+        ],
+        "name": "MattSaxeCollection",
+        "nameLocation": "9:18:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 2,
+        "src": "0:32:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:32:0"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/src/contracts/MattSaxeCollection.sol",
+    "exportedSymbols": {
+      "MattSaxeCollection": [
+        1
+      ]
+    },
+    "id": 2,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "MattSaxeCollection",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1,
+        "linearizedBaseContracts": [
+          1
+        ],
+        "name": "MattSaxeCollection",
+        "nameLocation": "9:18:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 2,
+        "src": "0:32:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:32:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-04-03T17:22:51.155Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
