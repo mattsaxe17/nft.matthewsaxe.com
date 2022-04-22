@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -13,11 +13,20 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'I\'m a freelance software engineer building fast, reponsive websites and applications in the Wilkes-Barre, PA area. My inbox is open, let\'s see what I can build for you.' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          "I'm a freelance software engineer building fast, reponsive websites and applications in the Wilkes-Barre, PA area. My inbox is open, let's see what I can build for you.",
+      },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'og:image', content: 'https://matthewsaxe.com/personal-site.png' },
       { name: 'og:image:type', content: 'image/png' },
-      { name: 'og:description', content: 'I\'m a freelance software engineer building fast, reponsive websites and applications in the Wilkes-Barre, PA area. My inbox is open, let\'s see what I can build for you.' },
+      {
+        name: 'og:description',
+        content:
+          "I'm a freelance software engineer building fast, reponsive websites and applications in the Wilkes-Barre, PA area. My inbox is open, let's see what I can build for you.",
+      },
       { name: 'og:title', content: 'Matthew Saxe' },
       { name: 'og:url', content: 'https://matthewsaxe.com' },
     ],
@@ -35,8 +44,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
@@ -70,7 +77,7 @@ export default {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
           background: '#252422',
-          anchor: '#CCC5B9'
+          anchor: '#CCC5B9',
         },
         light: {
           primary: '#EB5E28',
@@ -78,11 +85,11 @@ export default {
           secondary: '#ED6D3C',
           background: '#FFFCF2',
           anchor: '#252422',
-        }
+        },
       },
     },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+};

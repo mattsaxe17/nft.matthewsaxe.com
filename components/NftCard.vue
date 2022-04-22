@@ -21,41 +21,41 @@ export default {
   props: {
     image: {
       type: String,
-      required: true
+      required: true,
     },
     name: {
       type: String,
-      required: true
+      required: true,
     },
     collection: {
       type: String,
-      required: true
+      required: true,
     },
     price: {
       type: Number,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 #nft-card {
-  border-radius: .75em;
+  border-radius: 0.75em;
   overflow: hidden;
   background-color: var(--v-background-lighten1);
   border: 1px solid var(--v-background-darken1);
   cursor: pointer;
 
   .nft-info {
-    padding: .75em;
+    padding: 0.75em;
     display: flex;
     justify-content: space-between;
 
     .nft-info-block {
       .nft-info-block-label {
         margin: 0;
-        font-size: .8em;
+        font-size: 0.8em;
         color: grey;
       }
 
@@ -66,7 +66,7 @@ export default {
   }
 
   img {
-    width:100%
+    width: 100%;
   }
 }
 </style>

@@ -16,7 +16,7 @@ import NftCard from './NftCard.vue';
 
 export default {
   components: {
-    NftCard
+    NftCard,
   },
 };
 </script>

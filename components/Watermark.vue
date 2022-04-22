@@ -5,7 +5,7 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -19,12 +19,12 @@ export default {}
   bottom: -4vh;
   right: 2vw;
   color: var(--v-background-darken1);
-  opacity: .075;
+  opacity: 0.075;
   font-family: monospace;
   transform: rotate(-17deg);
 
   &.darken {
-    opacity: .2;
+    opacity: 0.2;
   }
 }
 </style>
