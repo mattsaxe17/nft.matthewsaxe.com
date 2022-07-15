@@ -1,5 +1,5 @@
 {
-  "name": "matthewsaxe.com",
+  "name": "nft.matthewsaxe.com",
   "author": "Matthew Saxe",
   "version": "1.0.0",
   "private": true,
@@ -10,10 +10,11 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "test": "jest",
-    "test:contracts": "truffle test",
     "pretty": "prettier --write \"./**/*.{js,jsx,json,vue}\"",
-    "test:polygon": "truffle test --config=truffle-config.polygon.js --network=$npm_config_network",
+    "test": "truffle test --config=truffle-config.js --network=development",
+    "compile": "truffle compile --config=truffle-config.js",
+    "migrate": "truffle migrate --config=truffle-config.js --network=$npm_config_network",
+    "test:polygon": "truffle test --config=truffle-config.polygon.js --network=testnet",
     "compile:polygon": "truffle compile --config=truffle-config.polygon.js",
     "migrate:polygon": "truffle migrate --config=truffle-config.polygon.js --network=$npm_config_network"
   },
