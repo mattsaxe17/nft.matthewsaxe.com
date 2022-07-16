@@ -1,5 +1,6 @@
 <template>
   <div id="marketplace-body">
+    <slot name="notifications"></slot>
     <nft-card
       v-for="token in []"
       :key="token.id"
