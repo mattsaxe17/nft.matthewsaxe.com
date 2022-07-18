@@ -9,8 +9,11 @@
       </marketplace-body>
     </div>
 
-    <portal to="connect-wallet">
-      <button @click="walletInteraction">{{ !!account.address ? account.address : 'Connect Wallet' }}</button>
+    <portal to="wallet-header">
+      <div id="wallet-header-controls">
+        <button @click="walletInteraction">{{ !!account.address ? account.address : 'Connect Wallet' }}</button>
+        <p v-if="!!account.address" id="wallet-balance">{{ account.balance.toFixed(4) }} Ξ</p>
+      </div>
     </portal>
   </div>
 </template>
@@ -112,6 +115,23 @@ export default {
       height: 100%;
       cursor: pointer;
     }
+  }
+}
+
+#wallet-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+
+  #wallet-balance {
+    margin: 0;
+    color: var(--v-primary-base);
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  &::after {
+    content: ' | '
   }
 }
 </style>

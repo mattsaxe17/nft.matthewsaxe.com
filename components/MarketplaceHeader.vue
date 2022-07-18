@@ -5,11 +5,9 @@
     </div>
     <div id="header-title">Matthew Saxe Genesis Collection (Coming Soon!)</div>
     <p>0 NFTs</p>
-    <p>{{ account.balance }} ETH</p>
     <p id="header-description">
-      This NFT collection is meant to be an ongoing project with the purpose of showcasing and sharpening my web3 development skills. The code is (and will continue to be) available on my
-      <a href="https://github.com/mattsaxe17/personal-nft-marketplace">Github</a>. Feel free to look around and check out the code, but I don't recommend buying one if you want to see any kind of
-      return (:
+      This NFT collection is meant to be an ongoing project with the purpose of showcasing and sharpening my web3 development skills. The code is available on my Github
+      <a href="https://github.com/mattsaxe17/personal-nft-marketplace">here</a>. Feel free to look around and check out the code, but I definitely don't recommend buying one if you are looking to make money (:
     </p>
   </div>
 </template>

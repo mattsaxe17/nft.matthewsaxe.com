@@ -1,7 +1,7 @@
 <template>
   <div id="nav-bar">
     <div id="menu">
-      <portal-target name="connect-wallet"></portal-target>
+      <portal-target name="wallet-header"></portal-target>
 
       <v-switch v-model="$vuetify.theme.dark" inset color="#e4602f">
         <template #label>
