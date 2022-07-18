@@ -1,6 +1,8 @@
-//const artifacts = require('artifacts');
-const CryptoBirdz = artifacts.require("CryptoBirdz");
+const Marketplace = artifacts.require('Marketplace');
+const MattSaxeGenesisCollection = artifacts.require('MattSaxeGenesisCollection');
 
 module.exports = function (deployer) {
-  deployer.deploy(CryptoBirdz);
+  deployer.deploy(Marketplace).then(function () {
+    return deployer.deploy(MattSaxeGenesisCollection, Marketplace.address);
+  });
 };

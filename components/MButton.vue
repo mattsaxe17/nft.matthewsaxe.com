@@ -17,8 +17,8 @@ export default {
       default: null,
     },
     colored: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
 };
 </script>

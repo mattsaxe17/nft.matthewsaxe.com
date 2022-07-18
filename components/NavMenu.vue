@@ -1,7 +1,7 @@
 <template>
   <div id="nav-bar">
     <div id="menu">
-      <button>Connect Wallet</button>
+      <portal-target name="wallet-header"></portal-target>
 
       <v-switch v-model="$vuetify.theme.dark" inset color="#e4602f">
         <template #label>
@@ -13,9 +13,6 @@
   </div>
 </template>
 
-<script>
-export default {}
-</script>
 
 <style lang="scss" scoped>
 #nav-bar {
@@ -28,9 +25,5 @@ export default {}
   display: flex;
   align-items: center;
   gap: 2em;
-
-  button {
-    cursor: not-allowed;
-  }
 }
 </style>

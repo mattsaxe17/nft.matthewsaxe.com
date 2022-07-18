@@ -14,8 +14,8 @@ export default {
     },
     newTab: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
 };
 </script>
@@ -24,6 +24,6 @@ export default {
 .m-link {
   text-decoration: none;
   font-weight: bold;
-  color: var(--v-primary-base)
+  color: var(--v-primary-base);
 }
 </style>
